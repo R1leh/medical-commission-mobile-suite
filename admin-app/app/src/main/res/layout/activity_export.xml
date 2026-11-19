@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Медкомиссия БУ МПК"
+            app:titleTextColor="#FFFFFF" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- TextView для отображения полного текста QR-кода -->
+    <TextView
+        android:id="@+id/tv_export_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Экспорт данных"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center" />
+
+    <!-- Каркас для данных -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/bg_card"
+        android:layout_marginTop="16dp"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvCheckupDates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Медкомиссия: Нет данных"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvDoctorsCount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Количество врачей: 0"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <!-- FrameLayout для отображения QR-кода с рамкой -->
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/qr_border">
+
+        <ImageView
+            android:id="@+id/iv_qr_code"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:padding="16dp"
+            android:contentDescription="QR-код" />
+    </FrameLayout>
+
+    <!-- Кнопка для генерации QR-кода -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_generate_qr"
+        style="@style/PrimaryButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Сгенерировать QR-код"
+        app:icon="@drawable/ic_qr_code"
+        app:iconGravity="start"
+        app:iconPadding="8dp" />
+
+    <!-- Кнопка для шаринга -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_share"
+        style="@style/SuccessButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Поделиться"
+        app:icon="@drawable/ic_share"
+        app:iconGravity="start"
+        app:iconPadding="8dp" />
+
+    <!-- Кнопка "Назад" -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_back"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Назад"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/colorSecondary"
+        app:icon="@drawable/ic_arrow_back"
+        app:iconGravity="start"
+        app:iconPadding="8dp" />
+</LinearLayout>

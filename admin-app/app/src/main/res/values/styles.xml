@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Стиль для всего приложения -->
+    <style name="AppButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_marginTop">8dp</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="PrimaryButton" parent="AppButton">
+        <item name="backgroundTint">@color/buttonPrimary</item>
+    </style>
+
+    <style name="SuccessButton" parent="AppButton">
+        <item name="backgroundTint">@color/buttonSuccess</item>
+    </style>
+
+    <style name="DangerButton" parent="AppButton">
+        <item name="backgroundTint">@color/buttonDanger</item>
+    </style>
+    <style name="AlertDialogTheme" parent="Theme.MaterialComponents.Dialog.Alert">
+        <item name="android:background">@color/background</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.MaterialComponents.Button.TextButton.Dialog</item>
+        <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+
+</resources>

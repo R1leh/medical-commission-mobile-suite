@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Медкомиссия</string>
+    <string name="edit_medical_dates">Редактирование дат медкомиссии</string>
+    <string name="start_date_label">Введите дату начала медкомиссии</string>
+    <string name="end_date_label">Введите дату конца медкомиссии</string>
+    <string name="pick_date">Выбрать дату</string>
+    <string name="cancel">Отмена</string>
+    <string name="save">Сохранить</string>
+    <string name="added_dates">Добавленные даты:</string>
+</resources>

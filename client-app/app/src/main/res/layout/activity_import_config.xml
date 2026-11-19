@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@android:color/white">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#3F51B5">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:title="Медкомиссия БУ МПК"
+            app:titleTextColor="#FFFFFF" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <!-- Заголовок -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Добавление конфигурации"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Поле для ввода ссылки -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:boxStrokeColor="@color/colorPrimary"
+        app:endIconMode="clear_text"
+        android:layout_marginBottom="16dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etConfigLink"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Вставить ссылку с конфигурацией"
+            android:inputType="textUri"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Или разделитель -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ИЛИ"
+        android:textColor="@color/textSecondary"
+        android:gravity="center"
+        android:layout_marginVertical="8dp"/>
+
+
+    <!-- Кнопка сканирования QR -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnScanQR"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="Сканировать QR-код"
+        android:textColor="@color/colorPrimary"
+        app:icon="@drawable/ic_qr_code"
+        app:iconGravity="start"
+        app:iconPadding="8dp"
+        app:strokeColor="@color/colorPrimary"
+        app:strokeWidth="1dp"/>
+
+    <!-- Кнопка назад -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:text="Назад"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/colorSecondary"
+        app:icon="@drawable/ic_arrow_back"
+        app:iconGravity="start"
+        app:iconPadding="8dp"/>
+</LinearLayout>
